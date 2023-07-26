@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  qdrant_bench:
+    image: epsilla/vectordb:0.0.1
+    network_mode: host
+    deploy:
+      resources:
+        limits:
+          memory: 25Gb
