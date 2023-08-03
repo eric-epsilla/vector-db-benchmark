@@ -19,8 +19,11 @@ class EpsillaConfigurator(BaseConfigurator):
     def recreate(self, distance, vector_size, collection_params, connection_params, extra_columns_name,
                  extra_columns_type):
         print("[EPSILLA] Metric:", DISTANCE_MAPPING[distance])
+        print("[EPSILLA] Vector Size:", vector_size)
+        print("[EPSILLA] Collection Params:", collection_params)
+        print("[EPSILLA] Connection Params:", connection_params)
+        print("[EPSILLA] Extra Columns Name:", extra_columns_name)
         print(f"distance {DISTANCE_MAPPING[distance]}, vector_size {vector_size}, collection_params {collection_params}")
-        # if EPSILLA_INDEX_NAME in self.client.list_indexes():
         self.client.drop_table(EPSILLA_INDEX_NAME)
 
         # metadata_config = {
@@ -28,7 +31,7 @@ class EpsillaConfigurator(BaseConfigurator):
         # }
         table_fields = [
             {"name": "id", "dataType": "INT", "primaryKey": True},
-            {"name": "vector", "dataType": "VECTOR_FLOAT", "dimensions": vector_size}
+            {"name": "vectors", "dataType": "VECTOR_FLOAT", "dimensions": vector_size}
         ]
         self.client.create_table(table_name=EPSILLA_INDEX_NAME,
                                 table_fields=table_fields
