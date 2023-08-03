@@ -1,7 +1,9 @@
 from typing import Any, List, Optional
 
+
 from engine.base_client import IncompatibilityError
 from engine.base_client.parser import BaseConditionParser, FieldValue
+from engine.clients.epsilla.config import *
 
 
 class EpsillaConditionParser(BaseConditionParser):

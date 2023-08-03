@@ -1,10 +1,9 @@
 import time
 from typing import List, Optional
-import pinecone
 import multiprocessing as mp
 
 from engine.base_client import BaseUploader
-from engine.clients.pinecone.config import *
+from engine.clients.epsilla.config import *
 from pyepsilla.vectordb import Client
 
 def convert_metadata(metadata_item: dict):
