@@ -40,6 +40,7 @@ ENGINE_CONFIGURATORS = {
     "redis": RedisConfigurator,
     "pinecone": PineconeConfigurator,
     "proxima": ProximaConfigurator,
+    "epsilla": EpsillaConfigurator,
 }
 
 ENGINE_UPLOADERS = {
@@ -52,6 +53,7 @@ ENGINE_UPLOADERS = {
     "redis": RedisUploader,
     "pinecone": PineconeUploader,
     "proxima": ProximaUploader,
+    "epsilla": EpsillaUploader,
 }
 
 ENGINE_SEARCHERS = {
@@ -64,6 +66,7 @@ ENGINE_SEARCHERS = {
     "redis": RedisSearcher,
     "pinecone": PineconeSearcher,
     "proxima": ProximaSearcher,
+    "epsilla": EpsillaSearcher,
 }
 
 
