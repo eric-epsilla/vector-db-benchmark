@@ -2,7 +2,7 @@ from typing import List, Optional, Tuple
 
 from engine.base_client import BaseSearcher
 from engine.clients.epsilla.config import *
-from engine.clients.epsilla.parser import PineconeConditionParser
+from engine.clients.epsilla.parser import EpsillaConditionParser
 from pyepsilla.vectordb import Client
 
 class EpsillaSearcher(BaseSearcher):
