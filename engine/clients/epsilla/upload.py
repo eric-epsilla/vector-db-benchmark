@@ -57,14 +57,14 @@ class EpsillaUploader(BaseUploader):
 
         vectors_multi = []
         for i in range(len(ids)):
-            print("[index]:", i, ids[i])
+            # print("[index]:", i, ids[i])
             # if metadata[0] is not None:
             #     # make pinecone to recognize this data.
             #     convert_metadata(metadata[i])
             #     vectors_multi.append((str(ids[i]), vectors[i], metadata[i]))  # 存储结构化字段
             # else:
             #     vectors_multi.append((str(ids[i]), vectors[i]))
-            vectors_multi.append( {"ID": i, "vector": vectors[i]} )
+            vectors_multi.append( {"ID": ids[i], "vector": vectors[i]} )
         while True:
             try:
                 upsert_response = cls.client.insert(table_name=EPSILLA_DATABASE_NAME, records=vectors_multi)
