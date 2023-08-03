@@ -31,14 +31,14 @@ class EpsillaConfigurator(BaseConfigurator):
         # }
         table_fields = [
             {"name": "id", "dataType": "INT", "primaryKey": True},
-            {"name": "vectors", "dataType": "VECTOR_FLOAT", "dimensions": vector_size}
+            {"name": "vector", "dataType": "VECTOR_FLOAT", "dimensions": vector_size}
         ]
         self.client.create_table(table_name=EPSILLA_INDEX_NAME,
                                 table_fields=table_fields
                               )
         # waiting for index ready
-        print("[EPSILLA] sleep 30 ...")
-        time.sleep(30)
+        print("[EPSILLA] sleep 3 ...")
+        time.sleep(3)
         # while True:
         #     try:
         #         index_description = pinecone.describe_index(name=EPSILLA_INDEX_NAME)
