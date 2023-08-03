@@ -31,7 +31,7 @@ class EpsillaConfigurator(BaseConfigurator):
             {"name": "Doc", "dataType": "STRING"},
             {"name": "Embedding", "dataType": "VECTOR_FLOAT", "dimensions": vector_size}
         ]
-        cls.client.create_index(table_name=EPSILLA_INDEX_NAME,
+        self.client.create_index(table_name=EPSILLA_INDEX_NAME,
                                 table_fields=table_fields
                               )
         # waiting for index ready
