@@ -42,7 +42,7 @@ class EpsillaUploader(BaseUploader):
 
         cls.client = Client(host=connection_params.get('host', "127.0.0.1"), port=connection_params.get('port', 8888))
         cls.client.load_db(db_name=EPSILLA_DATABASE_NAME, db_path="/tmp/epsilla")
-        cls.use_db(db_name=EPSILLA_DATABASE_NAME)
+        cls.client.use_db(db_name=EPSILLA_DATABASE_NAME)
 
 
     @classmethod
