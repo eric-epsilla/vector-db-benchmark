@@ -30,6 +30,11 @@ from engine.clients.weaviate import (
     WeaviateUploader,
 )
 
+from engine.clients.epsilla.configure import EpsillaConfigurator
+from engine.clients.epsilla.search import EpsillaSearcher
+from engine.clients.epsilla.upload import EpsillaUploader
+
+
 ENGINE_CONFIGURATORS = {
     "myscale": MyScaleConfigurator,
     "qdrant": QdrantConfigurator,
