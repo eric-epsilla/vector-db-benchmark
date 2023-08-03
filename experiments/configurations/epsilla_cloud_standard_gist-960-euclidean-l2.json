@@ -9,7 +9,7 @@
     "version": "v1.18.4",
     "branch": "tag-v1.18.4",
     "commit": "unknown",
-    "remark": "weaviate cloud standard",
+    "remark": "epsilla cloud standard",
     "other": "None",
     "link": "",
     "connection_params": {
@@ -196,8 +196,8 @@
       }
     ],
     "upload_params": {
-      "parallel": 8,
-      "batch_size": 2560
+      "parallel": 1,
+      "batch_size": 10000
     }
   }
 ]
