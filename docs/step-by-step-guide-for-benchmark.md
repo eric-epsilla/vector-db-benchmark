@@ -259,3 +259,14 @@ grep -E 'rps|mean_precision' $(ls -t)
 ```
 
 ![QdrantResults.jpg](../images/QdrantResults.jpg)
+
+## Epsilla
+
+### Step 1. Create Cluster
+```shell
+docker run -d -p 8888:8888 -v /tmp:/tmp epsilla/vectordb
+```
+### Step 2. Modify the configuration and launch the test
+```shell
+python3 run.py --datasets *gist-960-euclidean-l2*
+```

@@ -3,7 +3,7 @@
     "name": "gist-960-euclidean-l2",
     "result_group": "single_search",
     "vector_size": 960,
-    "vector_count": 1000000,
+    "vector_count": 100000,
     "queries": 1000,
     "distance": "l2",
     "type": "h5",
