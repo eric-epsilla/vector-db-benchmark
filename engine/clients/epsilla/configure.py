@@ -27,9 +27,8 @@ class EpsillaConfigurator(BaseConfigurator):
         # "indexed": index_column_list
         # }
         table_fields = [
-            {"name": "ID", "dataType": "INT"},
-            {"name": "Doc", "dataType": "STRING"},
-            {"name": "Embedding", "dataType": "VECTOR_FLOAT", "dimensions": vector_size}
+            {"name": "id", "dataType": "INT", "primaryKey": True},
+            {"name": "vector", "dataType": "VECTOR_FLOAT", "dimensions": vector_size}
         ]
         self.client.create_table(table_name=EPSILLA_INDEX_NAME,
                                 table_fields=table_fields
