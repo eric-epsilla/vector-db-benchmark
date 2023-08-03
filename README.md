@@ -10,6 +10,9 @@ First, install the necessary libraries on the client used for the benchmark.
 
 ```shell
 pip install -r requirements.txt
+
+python3 run.py  --datasets gist-960-euclidean-l2
+
 ```
 
 Afterwards, follow the [Step-by-Step Guide for Benchmark](docs/step-by-step-guide-for-benchmark.md) to execute the benchmark for each cloud service. You can refer to [Results Visualize](docs/results-visualize.md) for visualizing the test results.
