@@ -4,14 +4,14 @@ import string
 from engine.base_client.distances import Distance
 
 EPSILLA_DATABASE_NAME = "Benchmark"
-EPSILLA_DEFAULT_PORT = "8123"
+EPSILLA_DEFAULT_PORT = "8888"
 EPSILLA_DEFAULT_USER = "default"
 EPSILLA_DEFAULT_PASSWD = ""
 
 DISTANCE_MAPPING = {
     Distance.L2: "L2",
-    Distance.DOT: "IP",
-    Distance.COSINE: "COSINE"  # cosine problem, when normalized, IP=COSINE
+    # Distance.DOT: "IP",
+    # Distance.COSINE: "COSINE"  # cosine problem, when normalized, IP=COSINE
 }
 
 H5_COLUMN_TYPES_MAPPING = {
