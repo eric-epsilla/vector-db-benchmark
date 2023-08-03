@@ -196,8 +196,8 @@
       }
     ],
     "upload_params": {
-      "parallel": 2,
-      "batch_size": 1280
+      "parallel": 8,
+      "batch_size": 2560
     }
   }
 ]
