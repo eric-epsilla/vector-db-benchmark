@@ -1,59 +1,42 @@
-import time
 from typing import List, Optional, Tuple
-import clickhouse_connect
-from clickhouse_connect.driver.client import Client
+
 from engine.base_client import BaseSearcher
 from engine.clients.epsilla.config import *
-from engine.clients.epsilla.parser import EpsillaConditionParser
-
+from engine.clients.epsilla.parser import PineconeConditionParser
+from pyepsilla.vectordb import Client
 
 class EpsillaSearcher(BaseSearcher):
     search_params = {}
-    client: Client = None
-    distance: str = None
-    host: str = None
     parser = EpsillaConditionParser()
+    distance: str = None
+    index = None
 
     @classmethod
     def init_client(
             cls, host: str, distance, connection_params: dict, search_params: dict
     ):
-        cls.client = clickhouse_connect.get_client(host=connection_params.get('host', '127.0.0.1'),
-                                                   port=connection_params.get('port', 8123),
-                                                   username=connection_params.get("user", EPSILLA_DEFAULT_USER),
-                                                   password=connection_params.get("password", EPSILLA_DEFAULT_PASSWD))
-        cls.host = host
-        cls.distance = DISTANCE_MAPPING[distance]
-        cls.search_params = search_params
+        cls.client = Client(host=connection_params.get('host', "127.0.0.1"), port=connection_params.get('port', 8888))
+        cls.client.load_db(db_name=EPSILLA_DATABASE_NAME, db_path="/tmp/epsilla")
+        cls.use_db(db_name=EPSILLA_DATABASE_NAME)
+
 
     @classmethod
     def search_one(cls, vector: List[float], meta_conditions, top: Optional[int], schema) -> List[Tuple[int, float]]:
-        search_params_dict = cls.search_params["params"]
-        par = ""
-        for key in search_params_dict.keys():
-            par += ", \'{}={}\'".format(key, search_params_dict[key])
-        if par != "":
-            par = par[2:]
-
-        search_str = f"SELECT id, distance({par})(vector, {vector}) as dis FROM {EPSILLA_DATABASE_NAME}"
-
-        if meta_conditions is not None:
-            search_str += f" prewhere {cls.parser.parse(meta_conditions=meta_conditions)}"
-
-        if cls.distance == "IP":
-            search_str += f" order by dis DESC limit {top}"
-        else:
-            search_str += f" order by dis limit {top}"
-
-        res_list = []
         while True:
             try:
-                res = cls.client.query(search_str)
+                status_code, query_response = cls.client.query(
+                    table_name=EPSILLA_DATABASE_NAME,
+                    query_vector=vector,
+                    # query_field="Embedding",
+                    query_field=cls.parser.parse(meta_conditions),
+                    limit=top
+                )
                 break
             except Exception as e:
-                raise RuntimeError(e)
-
-        for res_id_dis in res.result_rows:
-            res_list.append((res_id_dis[0], res_id_dis[1]))
-
+                print(f"epsilla search_one exception 🐛 {e}")
+        res_list = []
+        for result_op in query_response:
+            print(result_op)
+            # res_list.append((int(result_op["id"]), float(result_op["score"])))
+        print(res_list)
         return res_list

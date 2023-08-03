@@ -1,107 +1,84 @@
 import time
 from typing import List, Optional
-
-import clickhouse_connect
-from clickhouse_connect.driver.client import Client
+import pinecone
+import multiprocessing as mp
 
 from engine.base_client import BaseUploader
-from engine.clients.epsilla.config import *
+from engine.clients.pinecone.config import *
+from pyepsilla.vectordb import Client
+
+def convert_metadata(metadata_item: dict):
+    # value must be a string, number (integer or floating point, gets converted to a 64 bit floating point), boolean or list of strings
+    # FixMe Convert null value to '' temporarily.
+    for key in metadata_item.keys():
+        if isinstance(metadata_item[key], str) \
+                or isinstance(metadata_item[key], int) \
+                or isinstance(metadata_item[key], float) \
+                or isinstance(metadata_item[key], bool):
+            continue
+        elif isinstance(metadata_item[key], list):
+            if len(metadata_item[key]) > 0 and not isinstance(metadata_item[key][0], str):
+                # Convert all elements in the list to str.
+                metadata_item[key] = [str(i) for i in metadata_item[key]]
+        else:
+            if metadata_item[key] is not None:
+                metadata_item[key] = str(metadata_item[key])
+            else:
+                metadata_item[key] = ''
 
 
 class EpsillaUploader(BaseUploader):
-    client: Client = None
+    index = None
     upload_params = {}
     distance: str = None
+    vector_count: int = 0
 
     @classmethod
     def init_client(cls, host, distance, vector_count, connection_params, upload_params,
                     extra_columns_name: list, extra_columns_type: list):
-        if cls.client is not None:
-            print(cls.client.ping())
-        try:
-            cls.client = clickhouse_connect.get_client(host=connection_params.get('host', '127.0.0.1'),
-                                                       port=connection_params.get('port', 8123),
-                                                       username=connection_params.get("user", EPSILLA_DEFAULT_USER),
-                                                       password=connection_params.get("password", EPSILLA_DEFAULT_PASSWD))
-        except Exception as e:
-            print(f"epsilla get exception: {e}")
+
         cls.upload_params = upload_params
         cls.distance = DISTANCE_MAPPING[distance]
+        cls.vector_count = vector_count
+
+        cls.client = Client(host=connection_params.get('host', "127.0.0.1"), port=connection_params.get('port', 8888))
+        cls.client.load_db(db_name=EPSILLA_DATABASE_NAME, db_path="/tmp/epsilla")
+        cls.use_db(db_name=EPSILLA_DATABASE_NAME)
+
 
     @classmethod
-    def upload_batch(cls, ids: List[int], vectors: List[list], metadata: List[Optional[dict]]):
+    def upload_batch(
+            cls, ids: List[int], vectors: List[list], metadata: List[Optional[dict]]
+    ):
         if len(ids) != len(vectors):
-            raise RuntimeError("epsilla batch upload unhealthy")
-        # Getting the names of structured data columns based on the first meta information.
-        col_list = ['id', 'vector']
-        if metadata[0] is not None:
-            for col_name in list(metadata[0].keys()):
-                col_list.append(str(col_name))
+            print("batch upload data is incorrect")
 
-        res = []
-        for i in range(0, len(ids)):
-            temp_list = [ids[i], vectors[i]]
-            if metadata[i] is not None:
-                for col_name in list(metadata[i].keys()):
-                    value = metadata[i][col_name]
-                    # Determining if the data is a dictionary type of latitude and longitude.
-                    if isinstance(value, dict) and ('lon' and 'lat') in list(value.keys()):
-                        # Keep the correct order of latitude and longitude. 🙆‍
-                        temp_list.append(tuple([value.get('lon'), value.get('lat')]))
-                    else:
-                        temp_list.append(value)
-            res.append(temp_list)
-
+        vectors_multi = []
+        for i in range(len(ids)):
+            if metadata[0] is not None:
+                # make pinecone to recognize this data.
+                convert_metadata(metadata[i])
+                vectors_multi.append((str(ids[i]), vectors[i], metadata[i]))  # 存储结构化字段
+            else:
+                vectors_multi.append((str(ids[i]), vectors[i]))
         while True:
             try:
-                cls.client.insert(EPSILLA_DATABASE_NAME, res, column_names=col_list)
-                break
+                upsert_response = cls.client.insert(table_name=EPSILLA_DATABASE_NAME, vectors=vectors_multi)
             except Exception as e:
-                print(f"epsilla upload exception {e}")
-                time.sleep(3)
+                print(f"epsilla upload exception: {e} 🐛 retrying...")
+                time.sleep(0.5)
 
     @classmethod
     def post_upload(cls, distance):
-        print("epsilla post upload: distance {}, cls.distance {}".format(distance, cls.distance))
-        # Create vector index
-        # index_parameter_str = "\'metric_type={}\'".format('IP' if cls.distance == 'COSINE' else cls.distance)
-        use_optimize = cls.upload_params.get("optimizers_config").get("optimize_final", True)
-        if use_optimize:
-            # prepare index create str
-            index_parameter_str = f"\'metric_type={cls.distance}\'"
-            for key in cls.upload_params.get("index_params", {}).keys():
-                index_parameter_str += ("'{}={}'" if index_parameter_str == "" else ",'{}={}'").format(
-                    key, cls.upload_params.get('index_params', {})[key])
-
-            index_create_str = f"alter table {EPSILLA_DATABASE_NAME} add vector index {EPSILLA_DATABASE_NAME}_{get_random_string(4)} vector type {cls.upload_params['index_type']}({index_parameter_str})"
-            # optimize table
-            optimize_str = "optimize table {} final".format(EPSILLA_DATABASE_NAME)
-            print(f">>> {optimize_str}")
-            optimize_begin_time = time.time()
-            try:
-                cls.client.command(optimize_str)
-            except Exception as e:
-                print(f"exp: {e}, epsilla may run by multi replicates mode..")
-                optimize_str = f"optimize table replicas.{EPSILLA_DATABASE_NAME} on cluster '{'{cluster}'}' final"
-                print(f">>> {optimize_str}")
-                cls.client.command(optimize_str)
-            print("optimize table finished, time consume {}".format(time.time() - optimize_begin_time))
-            print(f">>> {index_create_str}")
-            cls.client.command(index_create_str)
-        # waiting for vector index create finished
-        check_index_status = f"select status from system.vector_indices where table='{EPSILLA_DATABASE_NAME}'"
-        print(f">>> {check_index_status}")
-        while True:
-            time.sleep(5)
-            try:
-                res = cls.client.query(check_index_status)
-                if len(res.result_rows) == 0:
-                    print("you haven't build index")
-                print("{}".format(res.result_rows[0][0]), end=".", flush=True)
-                if str(res.result_rows[0][0]) == "Built":
-                    break
-            except Exception as e:
-                print(e)
-                time.sleep(3)
-                continue
+        print(f"epsilla post upload: distance {distance}, cls.distance {cls.distance}")
+        # while True:
+        #     # make sure vector index count fit datasets
+        #     total_vector_count = cls.index.describe_index_stats().get("total_vector_count", 0)
+        #     if total_vector_count < cls.vector_count:
+        #         print(f"{total_vector_count}", end='🌳', flush=True)
+        #         time.sleep(2)
+        #     else:
+        #         print(f"\npinecone total_vector_count: {total_vector_count}, datasets vector count: {cls.vector_count}")
+        #         break
+        time.sleep(30)
         return {}
