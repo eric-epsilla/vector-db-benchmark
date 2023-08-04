@@ -29,7 +29,8 @@ class EpsillaSearcher(BaseSearcher):
                     query_vector=vector,
                     query_field="vector",
                     response_fields=["id", "vector"],
-                    limit=top
+                    limit=top,
+                    with_distance=True
                 )
                 break
             except Exception as e:
@@ -38,6 +39,6 @@ class EpsillaSearcher(BaseSearcher):
         res_list = []
         for result_op in query_response["result"]:
             # print("result_op:", result_op)
-            res_list.append((int(result_op["id"]), result_op["vector"]))
+            res_list.append((int(result_op["id"]), result_op["@distance"]))
         # print("res_list:", res_list)
         return res_list
