@@ -57,7 +57,7 @@ class EpsillaUploader(BaseUploader):
 
         vectors_multi = []
         for i in range(len(ids)):
-            print("[index]:", i, ids[i])
+            print("[Inserting]:", i, ids[i])
             # if metadata[0] is not None:
             #     # make pinecone to recognize this data.
             #     convert_metadata(metadata[i])
