@@ -197,7 +197,7 @@
     ],
     "upload_params": {
       "parallel": 1,
-      "batch_size": 50000
+      "batch_size": 20000
     }
   }
 ]
