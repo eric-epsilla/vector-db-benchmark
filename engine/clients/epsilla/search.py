@@ -37,7 +37,7 @@ class EpsillaSearcher(BaseSearcher):
         # print("[RESULT]:", status_code, query_response)
         res_list = []
         for result_op in query_response["result"]:
-            print("result_op:", result_op)
+            # print("result_op:", result_op)
             res_list.append((int(result_op["id"]), result_op["vector"]))
-        print("res_list:", res_list)
+        # print("res_list:", res_list)
         return res_list
