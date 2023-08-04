@@ -34,6 +34,7 @@ class EpsillaSearcher(BaseSearcher):
                 break
             except Exception as e:
                 print(f"epsilla search_one exception 🐛 {e}")
+        print("[RESULT]:", status_code, query_response)
         res_list = []
         for result_op in query_response:
             print("query_response:", result_op)
