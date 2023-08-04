@@ -9,7 +9,7 @@ class EpsillaConfigurator(BaseConfigurator):
     def __init__(self, host, collection_params: dict, connection_params: dict):
         super().__init__(host, collection_params, connection_params)
         self.client = Client(host=connection_params.get('host', "127.0.0.1"), port=connection_params.get('port', 8888))
-        self.client.load_db(db_name=EPSILLA_DATABASE_NAME, db_path="/tmp/epsilla")
+        self.client.load_db(db_name=EPSILLA_DATABASE_NAME, db_path="/tmp/epsilla", vector_scale=1000000, wal_enabled=False)
         self.client.use_db(db_name=EPSILLA_DATABASE_NAME)
 
 
