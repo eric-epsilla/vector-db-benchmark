@@ -36,7 +36,7 @@ class EpsillaSearcher(BaseSearcher):
                 print(f"epsilla search_one exception 🐛 {e}")
         res_list = []
         for result_op in query_response:
-            print(result_op)
+            print("query_response:", result_op)
             # res_list.append((int(result_op["id"]), float(result_op["score"])))
-        print(res_list)
+        print("res_list:", res_list)
         return res_list
