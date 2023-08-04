@@ -96,7 +96,7 @@ class BaseSearcher:
             )
 
         total_time = time.perf_counter() - start
-        return {
+        res = {
             "total_time": total_time,
             "mean_time": np.mean(latencies),
             "mean_precisions": np.mean(precisions),
@@ -109,6 +109,8 @@ class BaseSearcher:
             "precisions": precisions,
             "latencies": latencies,
         }
+        print("[RESULT]:", res)
+        return res
 
     def setup_search(self, host, distance, connection_params: dict, search_params: dict):
         pass
