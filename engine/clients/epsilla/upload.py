@@ -65,12 +65,14 @@ class EpsillaUploader(BaseUploader):
             # else:
             #     vectors_multi.append((str(ids[i]), vectors[i]))
             vectors_multi.append( {"ID": ids[i], "vector": vectors[i]} )
-        while True:
-            try:
-                upsert_response = cls.client.insert(table_name=EPSILLA_DATABASE_NAME, records=vectors_multi)
-            except Exception as e:
-                print(f"epsilla upload exception: {e} 🐛 retrying...")
-                time.sleep(0.5)
+        # while True:
+        #     try:
+        #         upsert_response = cls.client.insert(table_name=EPSILLA_DATABASE_NAME, records=vectors_multi)
+        #     except Exception as e:
+        #         print(f"epsilla upload exception: {e} 🐛 retrying...")
+        upsert_response = cls.client.insert(table_name=EPSILLA_DATABASE_NAME, records=vectors_multi)
+        time.sleep(0.5)
+
 
     @classmethod
     def post_upload(cls, distance):
