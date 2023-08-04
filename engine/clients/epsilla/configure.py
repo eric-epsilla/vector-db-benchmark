@@ -24,7 +24,7 @@ class EpsillaConfigurator(BaseConfigurator):
         print("[EPSILLA] Connection Params:", connection_params)
         print("[EPSILLA] Extra Columns Name:", extra_columns_name)
         print(f"distance {DISTANCE_MAPPING[distance]}, vector_size {vector_size}, collection_params {collection_params}")
-        self.client.drop_table(EPSILLA_INDEX_NAME)
+        #self.client.drop_table(EPSILLA_INDEX_NAME)
 
         # metadata_config = {
         # "indexed": index_column_list
