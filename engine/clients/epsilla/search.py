@@ -27,8 +27,8 @@ class EpsillaSearcher(BaseSearcher):
                 status_code, query_response = cls.client.query(
                     table_name=EPSILLA_DATABASE_NAME,
                     query_vector=vector,
-                    # query_field="Embedding",
-                    query_field=cls.parser.parse(meta_conditions),
+                    query_field="vector",
+                    response_fields=["id", "vector"],
                     limit=top
                 )
                 break
