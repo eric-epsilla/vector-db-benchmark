@@ -13,10 +13,10 @@
     "other": "None",
     "link": "https://github.com/weaviate/weaviate/releases/tag/v1.18.4",
     "connection_params": {
-      "host": "https://your_host.weaviate.cloud",
+      "host": "https://benchmark-656h4x23.weaviate.network",
       "port": 8090,
       "timeout_config": 2000,
-      "api_key": "your_api_key"
+      "api_key": "qAD9e3Zx3Cc2cTwIC86bnaGUy2TYGzFDyg6f"
     },
     "collection_params": {
       "vectorIndexConfig": {
