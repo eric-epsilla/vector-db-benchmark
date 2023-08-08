@@ -30,6 +30,7 @@ class MilvusSearcher(BaseSearcher):
     @classmethod
     def search_one(cls, vector, meta_conditions, top, schema) -> List[Tuple[int, float]]:
         param = {"metric_type": cls.distance, "params": cls.search_params["params"]}
+        param["params"]["nprobe"] = 16
         while True:
             try:
                 res = cls.collection.search(
