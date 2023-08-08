@@ -51,8 +51,9 @@ def process_connection_params(connection_params_with_default_host: dict):
             alias=MILVUS_DEFAULT_ALIAS,
             uri=connection_params_with_default_host.get('end_point',
                                                         connection_params_with_default_host.get('default_host')),
-            user=connection_params_with_default_host.get('cloud_user', ""),
-            password=connection_params_with_default_host.get('cloud_password', ""),
+            # user=connection_params_with_default_host.get('cloud_user', ""),
+            # password=connection_params_with_default_host.get('cloud_password', ""),
+            token=connection_params_with_default_host.get('cloud_token', ""),
             secure=connection_params_with_default_host.get('cloud_secure', False)
         )
     else:

@@ -1,5 +1,5 @@
 from typing import List, Optional, Tuple
-
+import time
 from engine.base_client import BaseSearcher
 from engine.clients.epsilla.config import *
 from engine.clients.epsilla.parser import EpsillaConditionParser
@@ -22,6 +22,7 @@ class EpsillaSearcher(BaseSearcher):
 
     @classmethod
     def search_one(cls, vector: List[float], meta_conditions, top: Optional[int], schema) -> List[Tuple[int, float]]:
+        #print("QUERY:", vector)
         while True:
             try:
                 status_code, query_response = cls.client.query(
@@ -35,10 +36,11 @@ class EpsillaSearcher(BaseSearcher):
                 break
             except Exception as e:
                 print(f"epsilla search_one exception 🐛 {e}")
-        # print("[RESULT]:", status_code, query_response)
+            time.sleep(2)
+        #print("[RESULT]:", status_code, query_response)
         res_list = []
         for result_op in query_response["result"]:
-            print("result_op:", result_op)
+            #print("result_op:", result_op)
             res_list.append((int(result_op["id"]), float(result_op["@distance"])))
         # print("res_list:", res_list)
         return res_list

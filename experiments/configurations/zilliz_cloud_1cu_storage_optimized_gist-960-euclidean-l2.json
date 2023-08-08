@@ -1,0 +1,205 @@
+[
+  {
+    "name": "zilliz-v1.0.0-AUTOINDEX-dataset-gist-960-euclidean-l2-upload_parallel-16-batch_size-64",
+    "result_group": "single_search",
+    "engine": "zilliz",
+    "platform": "CloudTest_v0.0.2",
+    "index_type": "AUTOINDEX",
+    "dataset": "gist-960-euclidean-l2",
+    "version": "v1.0.0",
+    "branch": "zilliz-cloud",
+    "commit": "unknown",
+    "remark": "zilliz cloud 1cu_storage_optimized",
+    "other": "Client resource: 4c 8g",
+    "link": "https://zilliz.com/doc/release_notes",
+    "connection_params": {
+      "cloud_mode": true,
+      "host": "127.0.0.1",
+      "port": 19530,
+      "user": "",
+      "password": "",
+      "end_point": "https://in03-1898201bdca209e.api.gcp-us-west1.zillizcloud.com",
+      "cloud_user": "db_admin",
+      "cloud_password": "milvus_123456",
+      "cloud_token": "6cad0cacc38608017359c93308dfb91333504d532fd7d0ad504019b2965b2be72fe65b2f8b2be75e8e35bb89712e28876c67320c",
+      "cloud_secure": true
+    },
+    "collection_params": {},
+    "search_params": [
+      {
+        "parallel": 1,
+        "top": 10,
+        "params": {
+          "level": 1
+        }
+      },
+      {
+        "parallel": 1,
+        "top": 10,
+        "params": {
+          "level": 2
+        }
+      },
+      {
+        "parallel": 1,
+        "top": 10,
+        "params": {
+          "level": 3
+        }
+      },
+      {
+        "parallel": 1,
+        "top": 100,
+        "params": {
+          "level": 1
+        }
+      },
+      {
+        "parallel": 1,
+        "top": 100,
+        "params": {
+          "level": 2
+        }
+      },
+      {
+        "parallel": 1,
+        "top": 100,
+        "params": {
+          "level": 3
+        }
+      },
+      {
+        "parallel": 2,
+        "top": 10,
+        "params": {
+          "level": 1
+        }
+      },
+      {
+        "parallel": 2,
+        "top": 10,
+        "params": {
+          "level": 2
+        }
+      },
+      {
+        "parallel": 2,
+        "top": 10,
+        "params": {
+          "level": 3
+        }
+      },
+      {
+        "parallel": 2,
+        "top": 100,
+        "params": {
+          "level": 1
+        }
+      },
+      {
+        "parallel": 2,
+        "top": 100,
+        "params": {
+          "level": 2
+        }
+      },
+      {
+        "parallel": 2,
+        "top": 100,
+        "params": {
+          "level": 3
+        }
+      },
+      {
+        "parallel": 4,
+        "top": 10,
+        "params": {
+          "level": 1
+        }
+      },
+      {
+        "parallel": 4,
+        "top": 10,
+        "params": {
+          "level": 2
+        }
+      },
+      {
+        "parallel": 4,
+        "top": 10,
+        "params": {
+          "level": 3
+        }
+      },
+      {
+        "parallel": 4,
+        "top": 100,
+        "params": {
+          "level": 1
+        }
+      },
+      {
+        "parallel": 4,
+        "top": 100,
+        "params": {
+          "level": 2
+        }
+      },
+      {
+        "parallel": 4,
+        "top": 100,
+        "params": {
+          "level": 3
+        }
+      },
+      {
+        "parallel": 8,
+        "top": 10,
+        "params": {
+          "level": 1
+        }
+      },
+      {
+        "parallel": 8,
+        "top": 10,
+        "params": {
+          "level": 2
+        }
+      },
+      {
+        "parallel": 8,
+        "top": 10,
+        "params": {
+          "level": 3
+        }
+      },
+      {
+        "parallel": 8,
+        "top": 100,
+        "params": {
+          "level": 1
+        }
+      },
+      {
+        "parallel": 8,
+        "top": 100,
+        "params": {
+          "level": 2
+        }
+      },
+      {
+        "parallel": 8,
+        "top": 100,
+        "params": {
+          "level": 3
+        }
+      }
+    ],
+    "upload_params": {
+      "parallel": 16,
+      "batch_size": 64,
+      "index_params": {},
+      "index_type": "AUTOINDEX"
+    }
+  }
+]

@@ -17,7 +17,7 @@ def convert_string2unique_number(string_: str):
 
 
 results = []
-for file_path in walk_result_file_paths(root_path='cloud_test/CloudTest_v0.0.3'):
+for file_path in walk_result_file_paths(root_path='../results/'):
     if file_path.find("search") == -1:
         # skip processing upload_results
         continue
@@ -46,8 +46,8 @@ for file_path in walk_result_file_paths(root_path='cloud_test/CloudTest_v0.0.3')
         "dataset_group": each_json['meta']['dataset_group'],
         "dataset_tag": each_json['meta']['dataset_tag'],
         "time_stamp": each_json['meta']['time_stamp'],
-        "cost": each_json['meta']['monthly_cost']/(100*each_json['search_results']['rps']),
-        "monthly_cost": each_json['meta']['monthly_cost'],
+        #"cost": each_json['meta']['monthly_cost']/(100*each_json['search_results']['rps']),
+        #"monthly_cost": each_json['meta']['monthly_cost'],
         # index parameter
         "index_create_parameter": each_json['index_create_parameter'],
         # search parameter
@@ -65,7 +65,7 @@ for file_path in walk_result_file_paths(root_path='cloud_test/CloudTest_v0.0.3')
         "p95_time": each_json['search_results']['p95_time'],
         "mean_time": each_json['search_results']['mean_time'],
         # upload results
-        "total_upload": each_json['upload_results']['total_time'],
+        #"total_upload": each_json['upload_results']['total_time'],
 
     }
     # print(each_json_converted)
