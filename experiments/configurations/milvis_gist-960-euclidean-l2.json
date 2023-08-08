@@ -199,7 +199,7 @@
       "parallel": 16,
       "batch_size": 64,
       "index_params": {},
-      "index_type": "AUTOINDEX"
+      "index_type": "IVF_FLAT"
     }
   }
 ]
