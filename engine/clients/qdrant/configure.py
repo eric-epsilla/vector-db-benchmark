@@ -35,6 +35,7 @@ class QdrantConfigurator(BaseConfigurator):
         super().__init__(host, collection_params, connection_params)
         connection_params['host'] = host if connection_params.get('host', None) is None else connection_params['host']
         connection_params = process_connection_params(connection_params)
+        print("connection_params:", connection_params)
         self.client = QdrantClient(**connection_params)
 
 

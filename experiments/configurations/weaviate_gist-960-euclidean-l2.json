@@ -1,205 +1,203 @@
 [
   {
-    "name": "milvus-dataset-gist-960-euclidean-l2-upload_parallel-16-batch_size-64",
+    "name": "weaviate-v1.20.5-single_node-HNSW-free-dataset-gist-960-euclidean-l2-upload_parallel-16-batch_size-64",
     "result_group": "single_search",
-    "engine": "milvus",
-    "platform": "c6a.4xlarge",
-    "index_type": "AUTOINDEX",
+    "engine": "weaviate",
+    "platform": "CloudTest_v0.0.2",
+    "index_type": "HNSW",
     "dataset": "gist-960-euclidean-l2",
-    "version": "v1.0.0",
-    "branch": "milvus",
+    "version": "v1.20.5",
+    "branch": "tag-v1.20.5",
     "commit": "unknown",
-    "remark": "milvus 16c32g",
-    "other": "Client resource: 4c 8g",
-    "link": "https://zilliz.com/doc/release_notes",
+    "remark": "weaviate 16c32g",
+    "other": "None",
+    "link": "https://github.com/weaviate/weaviate/releases/tag/v1.20.5",
     "connection_params": {
-      "cloud_mode": false,
       "host": "172.31.90.214",
-      "port": 19530,
-      "user": "",
-      "password": "",
-      "end_point": "https://in03-a01d58d5b75adb5.api.gcp-us-west1.zillizcloud.com",
-      "cloud_user": "db_admin",
-      "cloud_password": "milvus_123456",
-      "cloud_token": "2d2249e3ede3ac590c08dce61b092e5a59cd7c5adb6f8567832777cff4b9fe79e5482ed30299df0809a40a99c3267f9e448bf16b",
-      "cloud_secure": true
+      "port": 8090,
+      "timeout_config": 2000,
+      "api_key": "qAD9e3Zx3Cc2cTwIC86bnaGUy2TYGzFDyg6f"
     },
-    "collection_params": {},
+    "collection_params": {
+      "vectorIndexConfig": {
+        "ef": 100,
+        "efConstruction": 128,
+        "maxConnections": 32
+      }
+    },
     "search_params": [
       {
         "parallel": 1,
         "top": 10,
-        "params": {
-          "level": 1
+        "vectorIndexConfig": {
+          "ef": 128
         }
       },
       {
         "parallel": 1,
         "top": 10,
-        "params": {
-          "level": 2
+        "vectorIndexConfig": {
+          "ef": 256
         }
       },
       {
         "parallel": 1,
         "top": 10,
-        "params": {
-          "level": 3
+        "vectorIndexConfig": {
+          "ef": 512
         }
       },
       {
         "parallel": 1,
         "top": 100,
-        "params": {
-          "level": 1
+        "vectorIndexConfig": {
+          "ef": 128
         }
       },
       {
         "parallel": 1,
         "top": 100,
-        "params": {
-          "level": 2
+        "vectorIndexConfig": {
+          "ef": 256
         }
       },
       {
         "parallel": 1,
         "top": 100,
-        "params": {
-          "level": 3
+        "vectorIndexConfig": {
+          "ef": 512
         }
       },
       {
         "parallel": 2,
         "top": 10,
-        "params": {
-          "level": 1
+        "vectorIndexConfig": {
+          "ef": 128
         }
       },
       {
         "parallel": 2,
         "top": 10,
-        "params": {
-          "level": 2
+        "vectorIndexConfig": {
+          "ef": 256
         }
       },
       {
         "parallel": 2,
         "top": 10,
-        "params": {
-          "level": 3
+        "vectorIndexConfig": {
+          "ef": 512
         }
       },
       {
         "parallel": 2,
         "top": 100,
-        "params": {
-          "level": 1
+        "vectorIndexConfig": {
+          "ef": 128
         }
       },
       {
         "parallel": 2,
         "top": 100,
-        "params": {
-          "level": 2
+        "vectorIndexConfig": {
+          "ef": 256
         }
       },
       {
         "parallel": 2,
         "top": 100,
-        "params": {
-          "level": 3
+        "vectorIndexConfig": {
+          "ef": 512
         }
       },
       {
         "parallel": 4,
         "top": 10,
-        "params": {
-          "level": 1
+        "vectorIndexConfig": {
+          "ef": 128
         }
       },
       {
         "parallel": 4,
         "top": 10,
-        "params": {
-          "level": 2
+        "vectorIndexConfig": {
+          "ef": 256
         }
       },
       {
         "parallel": 4,
         "top": 10,
-        "params": {
-          "level": 3
+        "vectorIndexConfig": {
+          "ef": 512
         }
       },
       {
         "parallel": 4,
         "top": 100,
-        "params": {
-          "level": 1
+        "vectorIndexConfig": {
+          "ef": 128
         }
       },
       {
         "parallel": 4,
         "top": 100,
-        "params": {
-          "level": 2
+        "vectorIndexConfig": {
+          "ef": 256
         }
       },
       {
         "parallel": 4,
         "top": 100,
-        "params": {
-          "level": 3
+        "vectorIndexConfig": {
+          "ef": 512
         }
       },
       {
         "parallel": 8,
         "top": 10,
-        "params": {
-          "level": 1
+        "vectorIndexConfig": {
+          "ef": 128
         }
       },
       {
         "parallel": 8,
         "top": 10,
-        "params": {
-          "level": 2
+        "vectorIndexConfig": {
+          "ef": 256
         }
       },
       {
         "parallel": 8,
         "top": 10,
-        "params": {
-          "level": 3
+        "vectorIndexConfig": {
+          "ef": 512
         }
       },
       {
         "parallel": 8,
         "top": 100,
-        "params": {
-          "level": 1
+        "vectorIndexConfig": {
+          "ef": 128
         }
       },
       {
         "parallel": 8,
         "top": 100,
-        "params": {
-          "level": 2
+        "vectorIndexConfig": {
+          "ef": 256
         }
       },
       {
         "parallel": 8,
         "top": 100,
-        "params": {
-          "level": 3
+        "vectorIndexConfig": {
+          "ef": 512
         }
       }
     ],
     "upload_params": {
       "parallel": 16,
-      "batch_size": 64,
-      "index_params": {},
-      "index_type": "IVF_FLAT"
+      "batch_size": 64
     }
   }
 ]
