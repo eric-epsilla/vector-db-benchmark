@@ -18,10 +18,10 @@
       "port": 19530,
       "user": "",
       "password": "",
-      "end_point": "https://in03-1898201bdca209e.api.gcp-us-west1.zillizcloud.com",
+      "end_point": "https://in03-a01d58d5b75adb5.api.gcp-us-west1.zillizcloud.com",
       "cloud_user": "db_admin",
       "cloud_password": "milvus_123456",
-      "cloud_token": "6cad0cacc38608017359c93308dfb91333504d532fd7d0ad504019b2965b2be72fe65b2f8b2be75e8e35bb89712e28876c67320c",
+      "cloud_token": "2d2249e3ede3ac590c08dce61b092e5a59cd7c5adb6f8567832777cff4b9fe79e5482ed30299df0809a40a99c3267f9e448bf16b",
       "cloud_secure": true
     },
     "collection_params": {},
