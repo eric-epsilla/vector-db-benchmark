@@ -1,238 +1,240 @@
 [
   {
-    "hash_code": 11930819743134308177739213205155388706,
-    "engine": "qdrant",
-    "version": "v1.1.1",
+    "hash_code": 182497154685267642281414395254214601962,
+    "engine": "milvus",
+    "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
-    "index_type": "HNSW",
+    "index_type": "AUTOINDEX",
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691525976509,
+    "time_stamp": 1691561849087,
     "index_create_parameter": {
-      "m": 16,
-      "ef_construct": 64,
-      "optimizers_config": {
-        "memmap_threshold": 20000
-      }
+      "nlist": 2048,
+      "optimizers_config": {}
     },
     "index_search_params": {
-      "hnsw_ef": 64
-    },
-    "search_parallel": 1,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.013300000000000001,
-    "rps": 9.077253083965541,
-    "p95_time": 0.11675459254884112,
-    "mean_time": 0.09293297476897715
-  },
-  {
-    "hash_code": 11930819743134308177739213205155388706,
-    "engine": "qdrant",
-    "version": "v1.1.1",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691525976509,
-    "index_create_parameter": {
-      "m": 16,
-      "ef_construct": 64,
-      "optimizers_config": {
-        "memmap_threshold": 20000
-      }
-    },
-    "index_search_params": {
-      "hnsw_ef": 128
-    },
-    "search_parallel": 1,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.038599999999999995,
-    "rps": 9.554331454671047,
-    "p95_time": 0.112812395601577,
-    "mean_time": 0.08822445149799205
-  },
-  {
-    "hash_code": 11930819743134308177739213205155388706,
-    "engine": "qdrant",
-    "version": "v1.1.1",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691525976509,
-    "index_create_parameter": {
-      "m": 16,
-      "ef_construct": 64,
-      "optimizers_config": {
-        "memmap_threshold": 20000
-      }
-    },
-    "index_search_params": {
-      "hnsw_ef": 256
-    },
-    "search_parallel": 1,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.0619,
-    "rps": 9.763104046593972,
-    "p95_time": 0.10960739904940055,
-    "mean_time": 0.08584357361101684
-  },
-  {
-    "hash_code": 11930819743134308177739213205155388706,
-    "engine": "qdrant",
-    "version": "v1.1.1",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691525976509,
-    "index_create_parameter": {
-      "m": 16,
-      "ef_construct": 64,
-      "optimizers_config": {
-        "memmap_threshold": 20000
-      }
-    },
-    "index_search_params": {
-      "hnsw_ef": 64
+      "level": 2
     },
     "search_parallel": 1,
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.08462000000000001,
-    "rps": 8.030227131001633,
-    "p95_time": 0.1277593105996857,
-    "mean_time": 0.09323561288701057
+    "mean_precisions": 0.69628,
+    "rps": 161.7750732902063,
+    "p95_time": 0.006923589001235087,
+    "mean_time": 0.0058885269169404635
   },
   {
-    "hash_code": 11930819743134308177739213205155388706,
-    "engine": "qdrant",
-    "version": "v1.1.1",
+    "hash_code": 182497154685267642281414395254214601962,
+    "engine": "milvus",
+    "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
-    "index_type": "HNSW",
+    "index_type": "AUTOINDEX",
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691525976509,
+    "time_stamp": 1691561849087,
     "index_create_parameter": {
-      "m": 16,
-      "ef_construct": 64,
-      "optimizers_config": {
-        "memmap_threshold": 20000
-      }
+      "nlist": 2048,
+      "optimizers_config": {}
     },
     "index_search_params": {
-      "hnsw_ef": 128
+      "level": 1
     },
     "search_parallel": 1,
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.11720000000000001,
-    "rps": 8.07165006869374,
-    "p95_time": 0.13027044399959778,
-    "mean_time": 0.09202122201899511
+    "mean_precisions": 0.69628,
+    "rps": 164.76404870653306,
+    "p95_time": 0.006783581451600185,
+    "mean_time": 0.0057845316430612005
   },
   {
-    "hash_code": 11930819743134308177739213205155388706,
-    "engine": "qdrant",
-    "version": "v1.1.1",
+    "hash_code": 334596691813938021527335612834668096676,
+    "engine": "milvus",
+    "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
-    "index_type": "HNSW",
+    "index_type": "AUTOINDEX",
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691525976509,
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
-      "m": 16,
-      "ef_construct": 64,
-      "optimizers_config": {
-        "memmap_threshold": 20000
-      }
+      "nlist": 2048,
+      "optimizers_config": {}
     },
     "index_search_params": {
-      "hnsw_ef": 256
+      "level": 1
     },
-    "search_parallel": 1,
+    "search_parallel": 8,
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.14731,
-    "rps": 8.086494662709626,
-    "p95_time": 0.1281603097495463,
-    "mean_time": 0.09186481465099314
+    "mean_precisions": 0.70902,
+    "rps": 98.55913314170417,
+    "p95_time": 0.10351817739683608,
+    "mean_time": 0.08076372964528128
   },
   {
-    "hash_code": 11930819743134308177739213205155388706,
-    "engine": "qdrant",
-    "version": "v1.1.1",
+    "hash_code": 334596691813938021527335612834668096676,
+    "engine": "milvus",
+    "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
-    "index_type": "HNSW",
+    "index_type": "AUTOINDEX",
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691525976509,
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
-      "m": 16,
-      "ef_construct": 64,
-      "optimizers_config": {
-        "memmap_threshold": 20000
-      }
+      "nlist": 2048,
+      "optimizers_config": {}
     },
     "index_search_params": {
-      "hnsw_ef": 64
+      "level": 3
+    },
+    "search_parallel": 8,
+    "search_top": 100,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.70902,
+    "rps": 98.48263420176993,
+    "p95_time": 0.10397544735533301,
+    "mean_time": 0.08081032109200077
+  },
+  {
+    "hash_code": 334596691813938021527335612834668096676,
+    "engine": "milvus",
+    "version": "v1.0.0",
+    "remark": "Client resource: 4c 8g",
+    "index_type": "AUTOINDEX",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691557337409,
+    "index_create_parameter": {
+      "nlist": 2048,
+      "optimizers_config": {}
+    },
+    "index_search_params": {
+      "level": 2
+    },
+    "search_parallel": 8,
+    "search_top": 100,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.70902,
+    "rps": 97.74110971317207,
+    "p95_time": 0.10437792660450214,
+    "mean_time": 0.08144660539564938
+  },
+  {
+    "hash_code": 334596691813938021527335612834668096676,
+    "engine": "milvus",
+    "version": "v1.0.0",
+    "remark": "Client resource: 4c 8g",
+    "index_type": "AUTOINDEX",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691557337409,
+    "index_create_parameter": {
+      "nlist": 2048,
+      "optimizers_config": {}
+    },
+    "index_search_params": {
+      "level": 3
+    },
+    "search_parallel": 4,
+    "search_top": 100,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.71236,
+    "rps": 98.03951119370082,
+    "p95_time": 0.0492329795481055,
+    "mean_time": 0.04024052462251166
+  },
+  {
+    "hash_code": 334596691813938021527335612834668096676,
+    "engine": "milvus",
+    "version": "v1.0.0",
+    "remark": "Client resource: 4c 8g",
+    "index_type": "AUTOINDEX",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691557337409,
+    "index_create_parameter": {
+      "nlist": 2048,
+      "optimizers_config": {}
+    },
+    "index_search_params": {
+      "level": 2
+    },
+    "search_parallel": 4,
+    "search_top": 100,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.72059,
+    "rps": 86.12475285802057,
+    "p95_time": 0.06797370549647894,
+    "mean_time": 0.04599232378799934
+  },
+  {
+    "hash_code": 334596691813938021527335612834668096676,
+    "engine": "milvus",
+    "version": "v1.0.0",
+    "remark": "Client resource: 4c 8g",
+    "index_type": "AUTOINDEX",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691557337409,
+    "index_create_parameter": {
+      "nlist": 2048,
+      "optimizers_config": {}
+    },
+    "index_search_params": {
+      "level": 1
+    },
+    "search_parallel": 4,
+    "search_top": 100,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.722645,
+    "rps": 80.55530119570756,
+    "p95_time": 0.07657172250183067,
+    "mean_time": 0.0492291614909409
+  },
+  {
+    "hash_code": 334596691813938021527335612834668096676,
+    "engine": "milvus",
+    "version": "v1.0.0",
+    "remark": "Client resource: 4c 8g",
+    "index_type": "AUTOINDEX",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691557337409,
+    "index_create_parameter": {
+      "nlist": 2048,
+      "optimizers_config": {}
+    },
+    "index_search_params": {
+      "level": 3
     },
     "search_parallel": 2,
-    "search_top": 10,
+    "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.17475000000000002,
-    "rps": 19.298739315111913,
-    "p95_time": 0.11594816529959644,
-    "mean_time": 0.08881154835397774
+    "mean_precisions": 0.7466900000000001,
+    "rps": 61.30551679137972,
+    "p95_time": 0.047859441096807134,
+    "mean_time": 0.032208878811612524
   },
   {
-    "hash_code": 11930819743134308177739213205155388706,
-    "engine": "qdrant",
-    "version": "v1.1.1",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691525976509,
-    "index_create_parameter": {
-      "m": 16,
-      "ef_construct": 64,
-      "optimizers_config": {
-        "memmap_threshold": 20000
-      }
-    },
-    "index_search_params": {
-      "hnsw_ef": 128
-    },
-    "search_parallel": 2,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.20015,
-    "rps": 19.175832143111332,
-    "p95_time": 0.11692278460086526,
-    "mean_time": 0.08959118498250791
-  },
-  {
-    "hash_code": 326241386987048145138262344837198217267,
+    "hash_code": 107614366001219651294041031143387686837,
     "engine": "epsilla",
     "version": "v1.18.4",
     "remark": "None",
@@ -240,7 +242,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633160396,
+    "time_stamp": 1691626922209,
     "index_create_parameter": {},
     "index_search_params": {
       "ef": 128
@@ -249,65 +251,289 @@
     "search_top": 10,
     "upload_parallel": 1,
     "upload_batch_size": 20000,
-    "mean_precisions": 0.3713,
-    "rps": 10.362357033393048,
-    "p95_time": 0.10014453280746238,
-    "mean_time": 0.0962076330989803
+    "mean_precisions": 0.7526,
+    "rps": 4.5475628828997126,
+    "p95_time": 0.22150025433729753,
+    "mean_time": 0.21779126037078095
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
-    "engine": "milvus",
-    "version": "v1.0.0",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "AUTOINDEX",
+    "hash_code": 107614366001219651294041031143387686837,
+    "engine": "epsilla",
+    "version": "v1.18.4",
+    "remark": "None",
+    "index_type": "HNSW",
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
-    "index_create_parameter": {
-      "nlist": 2048,
-      "optimizers_config": {}
-    },
+    "time_stamp": 1691626922209,
+    "index_create_parameter": {},
     "index_search_params": {
-      "level": 3
+      "ef": 256
     },
-    "search_parallel": 8,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.70726,
-    "rps": 99.71042424892616,
-    "p95_time": 0.10227153124433241,
-    "mean_time": 0.07968826346341121
+    "search_parallel": 1,
+    "search_top": 10,
+    "upload_parallel": 1,
+    "upload_batch_size": 20000,
+    "mean_precisions": 0.7526,
+    "rps": 4.546422547466043,
+    "p95_time": 0.22075761715241243,
+    "mean_time": 0.21777703575720078
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
-    "engine": "milvus",
-    "version": "v1.0.0",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "AUTOINDEX",
+    "hash_code": 327941075543139353949381485478722819833,
+    "engine": "epsilla",
+    "version": "v1.18.4",
+    "remark": "None",
+    "index_type": "HNSW",
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
-    "index_create_parameter": {
-      "nlist": 2048,
-      "optimizers_config": {}
-    },
+    "time_stamp": 1691628726395,
+    "index_create_parameter": {},
     "index_search_params": {
-      "level": 1
+      "ef": 512
     },
-    "search_parallel": 8,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.70726,
-    "rps": 100.2738187597268,
-    "p95_time": 0.1021943323117739,
-    "mean_time": 0.07927234035400761
+    "search_parallel": 1,
+    "search_top": 10,
+    "upload_parallel": 1,
+    "upload_batch_size": 20000,
+    "mean_precisions": 0.7526,
+    "rps": 4.587704340862387,
+    "p95_time": 0.2211326082513551,
+    "mean_time": 0.21758176349897984
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 327941075543139353949381485478722819833,
+    "engine": "epsilla",
+    "version": "v1.18.4",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691628726395,
+    "index_create_parameter": {},
+    "index_search_params": {
+      "ef": 256
+    },
+    "search_parallel": 1,
+    "search_top": 10,
+    "upload_parallel": 1,
+    "upload_batch_size": 20000,
+    "mean_precisions": 0.7526,
+    "rps": 4.587879658933619,
+    "p95_time": 0.22092709755088435,
+    "mean_time": 0.21756874545817845
+  },
+  {
+    "hash_code": 327941075543139353949381485478722819833,
+    "engine": "epsilla",
+    "version": "v1.18.4",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691628726395,
+    "index_create_parameter": {},
+    "index_search_params": {
+      "ef": 128
+    },
+    "search_parallel": 1,
+    "search_top": 10,
+    "upload_parallel": 1,
+    "upload_batch_size": 20000,
+    "mean_precisions": 0.7526,
+    "rps": 4.592275672411164,
+    "p95_time": 0.2199876384482195,
+    "mean_time": 0.21739729352213907
+  },
+  {
+    "hash_code": 6556366576772485455436241754832631221,
+    "engine": "epsilla",
+    "version": "v1.18.4",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691631008658,
+    "index_create_parameter": {},
+    "index_search_params": {
+      "ef": 128
+    },
+    "search_parallel": 1,
+    "search_top": 10,
+    "upload_parallel": 1,
+    "upload_batch_size": 20000,
+    "mean_precisions": 0.7526,
+    "rps": 4.591893167203303,
+    "p95_time": 0.22073969240082078,
+    "mean_time": 0.21749087190302088
+  },
+  {
+    "hash_code": 107614366001219651294041031143387686837,
+    "engine": "epsilla",
+    "version": "v1.18.4",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691626922209,
+    "index_create_parameter": {},
+    "index_search_params": {
+      "ef": 512
+    },
+    "search_parallel": 1,
+    "search_top": 10,
+    "upload_parallel": 1,
+    "upload_batch_size": 20000,
+    "mean_precisions": 0.7526,
+    "rps": 4.4485766043726835,
+    "p95_time": 0.22171753434449784,
+    "mean_time": 0.2178672965250298
+  },
+  {
+    "hash_code": 327941075543139353949381485478722819833,
+    "engine": "epsilla",
+    "version": "v1.18.4",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691628726395,
+    "index_create_parameter": {},
+    "index_search_params": {
+      "ef": 256
+    },
+    "search_parallel": 1,
+    "search_top": 100,
+    "upload_parallel": 1,
+    "upload_batch_size": 20000,
+    "mean_precisions": 0.75871,
+    "rps": 4.57012879080355,
+    "p95_time": 0.22186303869748372,
+    "mean_time": 0.2182818344347761
+  },
+  {
+    "hash_code": 107614366001219651294041031143387686837,
+    "engine": "epsilla",
+    "version": "v1.18.4",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691626922209,
+    "index_create_parameter": {},
+    "index_search_params": {
+      "ef": 256
+    },
+    "search_parallel": 1,
+    "search_top": 100,
+    "upload_parallel": 1,
+    "upload_batch_size": 20000,
+    "mean_precisions": 0.75871,
+    "rps": 4.524408071411752,
+    "p95_time": 0.2226691668984131,
+    "mean_time": 0.2185179923739779
+  },
+  {
+    "hash_code": 107614366001219651294041031143387686837,
+    "engine": "epsilla",
+    "version": "v1.18.4",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691626922209,
+    "index_create_parameter": {},
+    "index_search_params": {
+      "ef": 512
+    },
+    "search_parallel": 1,
+    "search_top": 100,
+    "upload_parallel": 1,
+    "upload_batch_size": 20000,
+    "mean_precisions": 0.75871,
+    "rps": 4.530129500931351,
+    "p95_time": 0.22140029399015476,
+    "mean_time": 0.2182052787116554
+  },
+  {
+    "hash_code": 107614366001219651294041031143387686837,
+    "engine": "epsilla",
+    "version": "v1.18.4",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691626922209,
+    "index_create_parameter": {},
+    "index_search_params": {
+      "ef": 128
+    },
+    "search_parallel": 1,
+    "search_top": 100,
+    "upload_parallel": 1,
+    "upload_batch_size": 20000,
+    "mean_precisions": 0.75871,
+    "rps": 4.528372139301753,
+    "p95_time": 0.22163400779754738,
+    "mean_time": 0.21831199922885572
+  },
+  {
+    "hash_code": 327941075543139353949381485478722819833,
+    "engine": "epsilla",
+    "version": "v1.18.4",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691628726395,
+    "index_create_parameter": {},
+    "index_search_params": {
+      "ef": 512
+    },
+    "search_parallel": 1,
+    "search_top": 100,
+    "upload_parallel": 1,
+    "upload_batch_size": 20000,
+    "mean_precisions": 0.75871,
+    "rps": 4.570359517244677,
+    "p95_time": 0.22207896605832503,
+    "mean_time": 0.21829496259400913
+  },
+  {
+    "hash_code": 327941075543139353949381485478722819833,
+    "engine": "epsilla",
+    "version": "v1.18.4",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691628726395,
+    "index_create_parameter": {},
+    "index_search_params": {
+      "ef": 128
+    },
+    "search_parallel": 1,
+    "search_top": 100,
+    "upload_parallel": 1,
+    "upload_batch_size": 20000,
+    "mean_precisions": 0.75871,
+    "rps": 4.568851617829864,
+    "p95_time": 0.22200285745275322,
+    "mean_time": 0.21834886706793621
+  },
+  {
+    "hash_code": 334596691813938021527335612834668096676,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -315,129 +541,25 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
     },
     "index_search_params": {
       "level": 2
-    },
-    "search_parallel": 8,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.70726,
-    "rps": 100.44698497232578,
-    "p95_time": 0.10208043149686999,
-    "mean_time": 0.07911116787550782
-  },
-  {
-    "hash_code": 57389899191410578164341769337498720552,
-    "engine": "milvus",
-    "version": "v1.0.0",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "AUTOINDEX",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
-    "index_create_parameter": {
-      "nlist": 2048,
-      "optimizers_config": {}
-    },
-    "index_search_params": {
-      "level": 3
-    },
-    "search_parallel": 4,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.7150575,
-    "rps": 96.22531478156384,
-    "p95_time": 0.0507984233481693,
-    "mean_time": 0.040899560077905336
-  },
-  {
-    "hash_code": 57389899191410578164341769337498720552,
-    "engine": "milvus",
-    "version": "v1.0.0",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "AUTOINDEX",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
-    "index_create_parameter": {
-      "nlist": 2048,
-      "optimizers_config": {}
-    },
-    "index_search_params": {
-      "level": 2
-    },
-    "search_parallel": 4,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.7213399999999999,
-    "rps": 85.59142192729699,
-    "p95_time": 0.07114918459410544,
-    "mean_time": 0.04622013742892159
-  },
-  {
-    "hash_code": 57389899191410578164341769337498720552,
-    "engine": "milvus",
-    "version": "v1.0.0",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "AUTOINDEX",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
-    "index_create_parameter": {
-      "nlist": 2048,
-      "optimizers_config": {}
-    },
-    "index_search_params": {
-      "level": 1
-    },
-    "search_parallel": 4,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.7261899999999999,
-    "rps": 81.93913387822028,
-    "p95_time": 0.07355919324254495,
-    "mean_time": 0.04827934956274475
-  },
-  {
-    "hash_code": 57389899191410578164341769337498720552,
-    "engine": "milvus",
-    "version": "v1.0.0",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "AUTOINDEX",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
-    "index_create_parameter": {
-      "nlist": 2048,
-      "optimizers_config": {}
-    },
-    "index_search_params": {
-      "level": 3
     },
     "search_parallel": 2,
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.749995,
-    "rps": 60.822152233892595,
-    "p95_time": 0.04676952359222923,
-    "mean_time": 0.032394314584424135
+    "mean_precisions": 0.75934,
+    "rps": 67.66398382745213,
+    "p95_time": 0.040501687706637306,
+    "mean_time": 0.029060641439045867
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 334596691813938021527335612834668096676,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -445,33 +567,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
-    "index_create_parameter": {
-      "nlist": 2048,
-      "optimizers_config": {}
-    },
-    "index_search_params": {
-      "level": 2
-    },
-    "search_parallel": 2,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.7601700000000001,
-    "rps": 68.532211609343,
-    "p95_time": 0.04080083785811439,
-    "mean_time": 0.02860647907157545
-  },
-  {
-    "hash_code": 57389899191410578164341769337498720552,
-    "engine": "milvus",
-    "version": "v1.0.0",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "AUTOINDEX",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -483,13 +579,13 @@
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.7601700000000001,
-    "rps": 59.39449810109499,
-    "p95_time": 0.04942595815155073,
-    "mean_time": 0.0331627615989928
+    "mean_precisions": 0.76003,
+    "rps": 60.02969666093069,
+    "p95_time": 0.047642692047156744,
+    "mean_time": 0.03289272330847598
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 182497154685267642281414395254214601962,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -497,7 +593,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691561849087,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -505,17 +601,17 @@
     "index_search_params": {
       "level": 3
     },
-    "search_parallel": 8,
+    "search_parallel": 1,
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.7835875000000001,
-    "rps": 99.87571942879752,
-    "p95_time": 0.10308025934646138,
-    "mean_time": 0.07960643247022745
+    "mean_precisions": 0.7815,
+    "rps": 170.40996442629176,
+    "p95_time": 0.006578807000551023,
+    "mean_time": 0.005601259782168199
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 182497154685267642281414395254214601962,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -523,33 +619,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
-    "index_create_parameter": {
-      "nlist": 2048,
-      "optimizers_config": {}
-    },
-    "index_search_params": {
-      "level": 2
-    },
-    "search_parallel": 8,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.7836000000000001,
-    "rps": 100.78668033198142,
-    "p95_time": 0.1015407289545692,
-    "mean_time": 0.07891113665743796
-  },
-  {
-    "hash_code": 57389899191410578164341769337498720552,
-    "engine": "milvus",
-    "version": "v1.0.0",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "AUTOINDEX",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691561849087,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -557,17 +627,17 @@
     "index_search_params": {
       "level": 1
     },
-    "search_parallel": 8,
+    "search_parallel": 1,
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.7836000000000001,
-    "rps": 101.27432431694243,
-    "p95_time": 0.10239034254700526,
-    "mean_time": 0.07850958753699525
+    "mean_precisions": 0.7816000000000001,
+    "rps": 171.95154631582412,
+    "p95_time": 0.0064307440508855505,
+    "mean_time": 0.005502933452000434
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 182497154685267642281414395254214601962,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -575,7 +645,33 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691561849087,
+    "index_create_parameter": {
+      "nlist": 2048,
+      "optimizers_config": {}
+    },
+    "index_search_params": {
+      "level": 2
+    },
+    "search_parallel": 1,
+    "search_top": 10,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.7816000000000001,
+    "rps": 171.038292948164,
+    "p95_time": 0.006506096546218032,
+    "mean_time": 0.00557414220507053
+  },
+  {
+    "hash_code": 334596691813938021527335612834668096676,
+    "engine": "milvus",
+    "version": "v1.0.0",
+    "remark": "Client resource: 4c 8g",
+    "index_type": "AUTOINDEX",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -587,13 +683,13 @@
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.78751,
-    "rps": 43.53293152937962,
-    "p95_time": 0.03213578924987814,
-    "mean_time": 0.022647465788031694
+    "mean_precisions": 0.78731,
+    "rps": 46.44515526593137,
+    "p95_time": 0.027887166548680398,
+    "mean_time": 0.021201061252060754
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 334596691813938021527335612834668096676,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -601,7 +697,85 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691557337409,
+    "index_create_parameter": {
+      "nlist": 2048,
+      "optimizers_config": {}
+    },
+    "index_search_params": {
+      "level": 3
+    },
+    "search_parallel": 8,
+    "search_top": 10,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.790725,
+    "rps": 99.46878511912314,
+    "p95_time": 0.1027405203458329,
+    "mean_time": 0.0800427009056375
+  },
+  {
+    "hash_code": 334596691813938021527335612834668096676,
+    "engine": "milvus",
+    "version": "v1.0.0",
+    "remark": "Client resource: 4c 8g",
+    "index_type": "AUTOINDEX",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691557337409,
+    "index_create_parameter": {
+      "nlist": 2048,
+      "optimizers_config": {}
+    },
+    "index_search_params": {
+      "level": 1
+    },
+    "search_parallel": 8,
+    "search_top": 10,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.7907375,
+    "rps": 99.35273063951747,
+    "p95_time": 0.10303812449856195,
+    "mean_time": 0.08011320703450747
+  },
+  {
+    "hash_code": 334596691813938021527335612834668096676,
+    "engine": "milvus",
+    "version": "v1.0.0",
+    "remark": "Client resource: 4c 8g",
+    "index_type": "AUTOINDEX",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691557337409,
+    "index_create_parameter": {
+      "nlist": 2048,
+      "optimizers_config": {}
+    },
+    "index_search_params": {
+      "level": 2
+    },
+    "search_parallel": 8,
+    "search_top": 10,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.79075,
+    "rps": 98.38693777506946,
+    "p95_time": 0.1045984408494405,
+    "mean_time": 0.08091611051136624
+  },
+  {
+    "hash_code": 334596691813938021527335612834668096676,
+    "engine": "milvus",
+    "version": "v1.0.0",
+    "remark": "Client resource: 4c 8g",
+    "index_type": "AUTOINDEX",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -613,13 +787,13 @@
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.79329,
-    "rps": 41.93059558414503,
-    "p95_time": 0.032771586603485045,
-    "mean_time": 0.02354001828924811
+    "mean_precisions": 0.79279,
+    "rps": 39.821033986698225,
+    "p95_time": 0.036224177452095316,
+    "mean_time": 0.024777894675920835
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -627,7 +801,61 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
+    "index_create_parameter": {
+      "ef": 100,
+      "efConstruction": 128,
+      "maxConnections": 32
+    },
+    "index_search_params": {
+      "ef": 128
+    },
+    "search_parallel": 1,
+    "search_top": 100,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.7974300000000001,
+    "rps": 92.5879632544033,
+    "p95_time": 0.011452599095719052,
+    "mean_time": 0.010531763098995724
+  },
+  {
+    "hash_code": 115834584341079741498012387526826993229,
+    "engine": "weaviate",
+    "version": "v1.20.5",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691556077816,
+    "index_create_parameter": {
+      "ef": 100,
+      "efConstruction": 128,
+      "maxConnections": 32
+    },
+    "index_search_params": {
+      "ef": 128
+    },
+    "search_parallel": 2,
+    "search_top": 100,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.7974300000000001,
+    "rps": 183.0791551945389,
+    "p95_time": 0.01383057999810262,
+    "mean_time": 0.010373751109404111
+  },
+  {
+    "hash_code": 115834584341079741498012387526826993229,
+    "engine": "weaviate",
+    "version": "v1.20.5",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -640,13 +868,13 @@
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.79865,
-    "rps": 485.7070355286934,
-    "p95_time": 0.020616838650312275,
-    "mean_time": 0.014104717183266984
+    "mean_precisions": 0.7974300000000001,
+    "rps": 535.807863792019,
+    "p95_time": 0.019067310398531843,
+    "mean_time": 0.013271497991649995
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -654,61 +882,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
-    "index_create_parameter": {
-      "ef": 100,
-      "efConstruction": 128,
-      "maxConnections": 32
-    },
-    "index_search_params": {
-      "ef": 128
-    },
-    "search_parallel": 2,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.7986500000000001,
-    "rps": 193.7773881322944,
-    "p95_time": 0.012046389455645113,
-    "mean_time": 0.009855457618163201
-  },
-  {
-    "hash_code": 97141068814361979350305917540387938424,
-    "engine": "weaviate",
-    "version": "v1.20.5",
-    "remark": "None",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
-    "index_create_parameter": {
-      "ef": 100,
-      "efConstruction": 128,
-      "maxConnections": 32
-    },
-    "index_search_params": {
-      "ef": 128
-    },
-    "search_parallel": 1,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.7986500000000001,
-    "rps": 93.10700920635168,
-    "p95_time": 0.012396968550456218,
-    "mean_time": 0.010441041133046383
-  },
-  {
-    "hash_code": 97141068814361979350305917540387938424,
-    "engine": "weaviate",
-    "version": "v1.20.5",
-    "remark": "None",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -721,13 +895,13 @@
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.7986500000000001,
-    "rps": 348.1349740108759,
-    "p95_time": 0.014295362507255048,
-    "mean_time": 0.010812337843231944
+    "mean_precisions": 0.7974300000000001,
+    "rps": 351.4177316226818,
+    "p95_time": 0.013939969500279401,
+    "mean_time": 0.010709981057427286
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 334596691813938021527335612834668096676,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -735,7 +909,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -747,13 +921,13 @@
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8005699999999999,
-    "rps": 50.83966313556274,
-    "p95_time": 0.026050808950094505,
-    "mean_time": 0.01936698310697102
+    "mean_precisions": 0.79982,
+    "rps": 50.693246147466766,
+    "p95_time": 0.02580917499763018,
+    "mean_time": 0.019396992115871398
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 334596691813938021527335612834668096676,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -761,7 +935,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -773,13 +947,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8089,
-    "rps": 84.19928961922963,
-    "p95_time": 0.06998081775236639,
-    "mean_time": 0.04698709941867492
+    "mean_precisions": 0.8081,
+    "rps": 84.19550724823989,
+    "p95_time": 0.0668335180496797,
+    "mean_time": 0.0471296102412598
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 334596691813938021527335612834668096676,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -787,7 +961,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -799,13 +973,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8110250000000001,
-    "rps": 80.9247054391417,
-    "p95_time": 0.0778207984069013,
-    "mean_time": 0.04896419225029604
+    "mean_precisions": 0.8082,
+    "rps": 79.57903959884038,
+    "p95_time": 0.07776942004929877,
+    "mean_time": 0.049892646330727076
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 334596691813938021527335612834668096676,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -813,7 +987,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -825,13 +999,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8190999999999999,
-    "rps": 82.29961320974466,
-    "p95_time": 0.06944333340288722,
-    "mean_time": 0.04812415258949113
+    "mean_precisions": 0.8210500000000001,
+    "rps": 81.34812021049275,
+    "p95_time": 0.06963906870441859,
+    "mean_time": 0.048770097509732296
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 334596691813938021527335612834668096676,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -839,33 +1013,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
-    "index_create_parameter": {
-      "nlist": 2048,
-      "optimizers_config": {}
-    },
-    "index_search_params": {
-      "level": 2
-    },
-    "search_parallel": 2,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.83925,
-    "rps": 60.33539645088722,
-    "p95_time": 0.04676943560261861,
-    "mean_time": 0.03268201758152282
-  },
-  {
-    "hash_code": 57389899191410578164341769337498720552,
-    "engine": "milvus",
-    "version": "v1.0.0",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "AUTOINDEX",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -877,105 +1025,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8399000000000001,
-    "rps": 69.04575662702621,
-    "p95_time": 0.038161069640045744,
-    "mean_time": 0.02837034008046612
+    "mean_precisions": 0.8374000000000001,
+    "rps": 66.13003123720242,
+    "p95_time": 0.04338247299929208,
+    "mean_time": 0.02976056175646954
   },
   {
-    "hash_code": 59116450560403421094878386626606252663,
-    "engine": "pinecone",
-    "version": "2023-4-3",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "s1",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691126278850,
-    "index_create_parameter": {
-      "pod_type": "s1"
-    },
-    "index_search_params": "",
-    "search_parallel": 1,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.8401099999999999,
-    "rps": 16.098076166762148,
-    "p95_time": 0.06961843250073797,
-    "mean_time": 0.061951055628018364
-  },
-  {
-    "hash_code": 59116450560403421094878386626606252663,
-    "engine": "pinecone",
-    "version": "2023-4-3",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "s1",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691126278850,
-    "index_create_parameter": {
-      "pod_type": "s1"
-    },
-    "index_search_params": "",
-    "search_parallel": 4,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.8401099999999999,
-    "rps": 18.783276488991135,
-    "p95_time": 0.2285676094491464,
-    "mean_time": 0.21269247777200098
-  },
-  {
-    "hash_code": 59116450560403421094878386626606252663,
-    "engine": "pinecone",
-    "version": "2023-4-3",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "s1",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691126278850,
-    "index_create_parameter": {
-      "pod_type": "s1"
-    },
-    "index_search_params": "",
-    "search_parallel": 8,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.8401099999999999,
-    "rps": 18.920420736193403,
-    "p95_time": 0.4433400978494319,
-    "mean_time": 0.422379228982622
-  },
-  {
-    "hash_code": 59116450560403421094878386626606252663,
-    "engine": "pinecone",
-    "version": "2023-4-3",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "s1",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691126278850,
-    "index_create_parameter": {
-      "pod_type": "s1"
-    },
-    "index_search_params": "",
-    "search_parallel": 2,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.8401099999999999,
-    "rps": 18.788408309076882,
-    "p95_time": 0.11693217495012505,
-    "mean_time": 0.10624673560299926
-  },
-  {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 334596691813938021527335612834668096676,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -983,7 +1039,33 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691557337409,
+    "index_create_parameter": {
+      "nlist": 2048,
+      "optimizers_config": {}
+    },
+    "index_search_params": {
+      "level": 2
+    },
+    "search_parallel": 2,
+    "search_top": 10,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.83945,
+    "rps": 61.963838575309715,
+    "p95_time": 0.04718712510511977,
+    "mean_time": 0.03184949649966802
+  },
+  {
+    "hash_code": 334596691813938021527335612834668096676,
+    "engine": "milvus",
+    "version": "v1.0.0",
+    "remark": "Client resource: 4c 8g",
+    "index_type": "AUTOINDEX",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -995,13 +1077,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8459,
-    "rps": 65.21255679058959,
-    "p95_time": 0.043867720542039024,
-    "mean_time": 0.030186973313502678
+    "mean_precisions": 0.8457,
+    "rps": 61.0416927761996,
+    "p95_time": 0.04804136845341418,
+    "mean_time": 0.03233541187347509
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 334596691813938021527335612834668096676,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -1009,7 +1091,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -1021,13 +1103,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8597,
-    "rps": 40.83321417967505,
-    "p95_time": 0.033285901751514746,
-    "mean_time": 0.02419609621798736
+    "mean_precisions": 0.8623999999999999,
+    "rps": 40.696707926207935,
+    "p95_time": 0.03433751575321366,
+    "mean_time": 0.024253291120985523
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 334596691813938021527335612834668096676,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -1035,7 +1117,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -1047,13 +1129,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8697,
-    "rps": 42.50334296644954,
-    "p95_time": 0.033762756513169734,
-    "mean_time": 0.023228624027979095
+    "mean_precisions": 0.8712000000000001,
+    "rps": 41.37734266669867,
+    "p95_time": 0.03751100780100386,
+    "mean_time": 0.023847784112185764
   },
   {
-    "hash_code": 57389899191410578164341769337498720552,
+    "hash_code": 334596691813938021527335612834668096676,
     "engine": "milvus",
     "version": "v1.0.0",
     "remark": "Client resource: 4c 8g",
@@ -1061,7 +1143,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691633391037,
+    "time_stamp": 1691557337409,
     "index_create_parameter": {
       "nlist": 2048,
       "optimizers_config": {}
@@ -1073,13 +1155,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8698,
-    "rps": 47.94151863515831,
-    "p95_time": 0.02774096708890283,
-    "mean_time": 0.02056774312305788
+    "mean_precisions": 0.8714000000000001,
+    "rps": 47.5657761355212,
+    "p95_time": 0.02784129209940147,
+    "mean_time": 0.02069176699982927
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1087,7 +1169,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1100,13 +1182,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8895,
-    "rps": 586.0111514870678,
-    "p95_time": 0.018347419502242696,
-    "mean_time": 0.01199539877217103
+    "mean_precisions": 0.8871000000000001,
+    "rps": 644.7687404501129,
+    "p95_time": 0.016511885447107483,
+    "mean_time": 0.011300471316115362
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1114,34 +1196,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
-    "index_create_parameter": {
-      "ef": 100,
-      "efConstruction": 128,
-      "maxConnections": 32
-    },
-    "index_search_params": {
-      "ef": 128
-    },
-    "search_parallel": 2,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.8895,
-    "rps": 221.88251011428517,
-    "p95_time": 0.010893635506363353,
-    "mean_time": 0.00859250952747243
-  },
-  {
-    "hash_code": 97141068814361979350305917540387938424,
-    "engine": "weaviate",
-    "version": "v1.20.5",
-    "remark": "None",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1154,13 +1209,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8895,
-    "rps": 65.18536366484564,
-    "p95_time": 0.03881729608910973,
-    "mean_time": 0.015050342744318186
+    "mean_precisions": 0.8871000000000001,
+    "rps": 100.69463133123823,
+    "p95_time": 0.016687051648841583,
+    "mean_time": 0.009617281132268545
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1168,7 +1223,34 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
+    "index_create_parameter": {
+      "ef": 100,
+      "efConstruction": 128,
+      "maxConnections": 32
+    },
+    "index_search_params": {
+      "ef": 128
+    },
+    "search_parallel": 2,
+    "search_top": 10,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.8871000000000001,
+    "rps": 217.7888613432626,
+    "p95_time": 0.01045775404854794,
+    "mean_time": 0.008687056431957899
+  },
+  {
+    "hash_code": 115834584341079741498012387526826993229,
+    "engine": "weaviate",
+    "version": "v1.20.5",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1181,13 +1263,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8895,
-    "rps": 398.0759275903279,
-    "p95_time": 0.012267351004993543,
-    "mean_time": 0.009443832054421364
+    "mean_precisions": 0.8871000000000001,
+    "rps": 413.161109690456,
+    "p95_time": 0.01163418949836341,
+    "mean_time": 0.009092999081021845
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1195,34 +1277,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
-    "index_create_parameter": {
-      "ef": 100,
-      "efConstruction": 128,
-      "maxConnections": 32
-    },
-    "index_search_params": {
-      "ef": 256
-    },
-    "search_parallel": 4,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.8914200000000001,
-    "rps": 300.8358767176698,
-    "p95_time": 0.01595352995500434,
-    "mean_time": 0.012644143347373757
-  },
-  {
-    "hash_code": 97141068814361979350305917540387938424,
-    "engine": "weaviate",
-    "version": "v1.20.5",
-    "remark": "None",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1235,13 +1290,13 @@
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8914200000000001,
-    "rps": 162.7785255259704,
-    "p95_time": 0.014192195495706982,
-    "mean_time": 0.011814491216631723
+    "mean_precisions": 0.8911399999999998,
+    "rps": 161.07146924172798,
+    "p95_time": 0.014347941999949399,
+    "mean_time": 0.01191990850800721
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1249,7 +1304,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1262,13 +1317,13 @@
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8914200000000001,
-    "rps": 84.1407648568904,
-    "p95_time": 0.014229212293867009,
-    "mean_time": 0.011599038949876558
+    "mean_precisions": 0.8911399999999999,
+    "rps": 85.99549419902469,
+    "p95_time": 0.012787599503644742,
+    "mean_time": 0.011362869346005028
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1276,7 +1331,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1289,105 +1344,13 @@
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.8914200000000001,
-    "rps": 473.5409326762992,
-    "p95_time": 0.02168035455251811,
-    "mean_time": 0.015494851685671164
+    "mean_precisions": 0.8911400000000002,
+    "rps": 493.55634292961076,
+    "p95_time": 0.02091032354474009,
+    "mean_time": 0.015076221074191381
   },
   {
-    "hash_code": 59116450560403421094878386626606252663,
-    "engine": "pinecone",
-    "version": "2023-4-3",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "s1",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691126278850,
-    "index_create_parameter": {
-      "pod_type": "s1"
-    },
-    "index_search_params": "",
-    "search_parallel": 8,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.9233,
-    "rps": 19.164117326308297,
-    "p95_time": 0.4402346253500582,
-    "mean_time": 0.41702481914373857
-  },
-  {
-    "hash_code": 59116450560403421094878386626606252663,
-    "engine": "pinecone",
-    "version": "2023-4-3",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "s1",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691126278850,
-    "index_create_parameter": {
-      "pod_type": "s1"
-    },
-    "index_search_params": "",
-    "search_parallel": 4,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.9233,
-    "rps": 19.130665154552656,
-    "p95_time": 0.2242920551499992,
-    "mean_time": 0.20879281687650608
-  },
-  {
-    "hash_code": 59116450560403421094878386626606252663,
-    "engine": "pinecone",
-    "version": "2023-4-3",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "s1",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691126278850,
-    "index_create_parameter": {
-      "pod_type": "s1"
-    },
-    "index_search_params": "",
-    "search_parallel": 1,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.9233,
-    "rps": 16.993824535556477,
-    "p95_time": 0.06618738574998133,
-    "mean_time": 0.05866767970204273
-  },
-  {
-    "hash_code": 59116450560403421094878386626606252663,
-    "engine": "pinecone",
-    "version": "2023-4-3",
-    "remark": "Client resource: 4c 8g",
-    "index_type": "s1",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691126278850,
-    "index_create_parameter": {
-      "pod_type": "s1"
-    },
-    "index_search_params": "",
-    "search_parallel": 2,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.9233,
-    "rps": 18.986296592987273,
-    "p95_time": 0.11566512569952465,
-    "mean_time": 0.10513408628647448
-  },
-  {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1395,7 +1358,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1405,16 +1368,16 @@
       "ef": 256
     },
     "search_parallel": 4,
-    "search_top": 10,
+    "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.9451,
-    "rps": 345.2262135884674,
-    "p95_time": 0.014204199003870599,
-    "mean_time": 0.0110252608247647
+    "mean_precisions": 0.8911400000000002,
+    "rps": 304.6869279367455,
+    "p95_time": 0.015897740502623492,
+    "mean_time": 0.012509403658023076
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1422,7 +1385,34 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
+    "index_create_parameter": {
+      "ef": 100,
+      "efConstruction": 128,
+      "maxConnections": 32
+    },
+    "index_search_params": {
+      "ef": 256
+    },
+    "search_parallel": 1,
+    "search_top": 10,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.944,
+    "rps": 88.06389059635842,
+    "p95_time": 0.012277685599838151,
+    "mean_time": 0.011008941055915784
+  },
+  {
+    "hash_code": 115834584341079741498012387526826993229,
+    "engine": "weaviate",
+    "version": "v1.20.5",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1435,13 +1425,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.9451,
-    "rps": 182.966037584792,
-    "p95_time": 0.012868707558664025,
-    "mean_time": 0.010512547808008093
+    "mean_precisions": 0.944,
+    "rps": 180.10251376191002,
+    "p95_time": 0.01351596245112887,
+    "mean_time": 0.010610510708447691
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1449,7 +1439,34 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
+    "index_create_parameter": {
+      "ef": 100,
+      "efConstruction": 128,
+      "maxConnections": 32
+    },
+    "index_search_params": {
+      "ef": 256
+    },
+    "search_parallel": 4,
+    "search_top": 10,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.944,
+    "rps": 351.47225314228217,
+    "p95_time": 0.013511998502508504,
+    "mean_time": 0.010847757087067294
+  },
+  {
+    "hash_code": 115834584341079741498012387526826993229,
+    "engine": "weaviate",
+    "version": "v1.20.5",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1462,13 +1479,13 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.9451000000000002,
-    "rps": 530.6508592427904,
-    "p95_time": 0.01949965505118598,
-    "mean_time": 0.013872411599899352
+    "mean_precisions": 0.944,
+    "rps": 564.7434719707503,
+    "p95_time": 0.018076489950180984,
+    "mean_time": 0.013314111912490262
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1476,88 +1493,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
-    "index_create_parameter": {
-      "ef": 100,
-      "efConstruction": 128,
-      "maxConnections": 32
-    },
-    "index_search_params": {
-      "ef": 256
-    },
-    "search_parallel": 1,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.9451000000000002,
-    "rps": 92.10157506429383,
-    "p95_time": 0.012491197145573093,
-    "mean_time": 0.01055842946113262
-  },
-  {
-    "hash_code": 97141068814361979350305917540387938424,
-    "engine": "weaviate",
-    "version": "v1.20.5",
-    "remark": "None",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
-    "index_create_parameter": {
-      "ef": 100,
-      "efConstruction": 128,
-      "maxConnections": 32
-    },
-    "index_search_params": {
-      "ef": 512
-    },
-    "search_parallel": 2,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.94771,
-    "rps": 127.97141003217621,
-    "p95_time": 0.018761442039976827,
-    "mean_time": 0.01517240726682212
-  },
-  {
-    "hash_code": 97141068814361979350305917540387938424,
-    "engine": "weaviate",
-    "version": "v1.20.5",
-    "remark": "None",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
-    "index_create_parameter": {
-      "ef": 100,
-      "efConstruction": 128,
-      "maxConnections": 32
-    },
-    "index_search_params": {
-      "ef": 512
-    },
-    "search_parallel": 4,
-    "search_top": 100,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.94771,
-    "rps": 234.4683583213266,
-    "p95_time": 0.02090062909483094,
-    "mean_time": 0.016430312531061645
-  },
-  {
-    "hash_code": 97141068814361979350305917540387938424,
-    "engine": "weaviate",
-    "version": "v1.20.5",
-    "remark": "None",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1570,13 +1506,13 @@
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.94771,
-    "rps": 375.32161800309217,
-    "p95_time": 0.02703204799836384,
-    "mean_time": 0.020265055655358084
+    "mean_precisions": 0.9475899999999999,
+    "rps": 385.9930644546212,
+    "p95_time": 0.026349177051088173,
+    "mean_time": 0.019875235572278143
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1584,7 +1520,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1597,13 +1533,13 @@
     "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.94771,
-    "rps": 66.94050783330654,
-    "p95_time": 0.01729467450204538,
-    "mean_time": 0.014651829957045266
+    "mean_precisions": 0.94759,
+    "rps": 68.17115238516497,
+    "p95_time": 0.016888088999985486,
+    "mean_time": 0.014403371240950947
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1611,61 +1547,7 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
-    "index_create_parameter": {
-      "ef": 100,
-      "efConstruction": 128,
-      "maxConnections": 32
-    },
-    "index_search_params": {
-      "ef": 512
-    },
-    "search_parallel": 8,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.9753999999999999,
-    "rps": 409.12310888575723,
-    "p95_time": 0.024771572899771853,
-    "mean_time": 0.018655832679700324
-  },
-  {
-    "hash_code": 97141068814361979350305917540387938424,
-    "engine": "weaviate",
-    "version": "v1.20.5",
-    "remark": "None",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
-    "index_create_parameter": {
-      "ef": 100,
-      "efConstruction": 128,
-      "maxConnections": 32
-    },
-    "index_search_params": {
-      "ef": 512
-    },
-    "search_parallel": 1,
-    "search_top": 10,
-    "upload_parallel": 16,
-    "upload_batch_size": 64,
-    "mean_precisions": 0.9754,
-    "rps": 69.50528808000004,
-    "p95_time": 0.016231971504021205,
-    "mean_time": 0.014103313490122673
-  },
-  {
-    "hash_code": 97141068814361979350305917540387938424,
-    "engine": "weaviate",
-    "version": "v1.20.5",
-    "remark": "None",
-    "index_type": "HNSW",
-    "dataset": "gist-960-euclidean-l2",
-    "dataset_group": "gist-960-euclidean",
-    "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1675,16 +1557,16 @@
       "ef": 512
     },
     "search_parallel": 4,
-    "search_top": 10,
+    "search_top": 100,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.9754,
-    "rps": 272.06472840829264,
-    "p95_time": 0.01801969949810882,
-    "mean_time": 0.014182861360441166
+    "mean_precisions": 0.94759,
+    "rps": 238.3013112960632,
+    "p95_time": 0.02056686200012336,
+    "mean_time": 0.01621753267096028
   },
   {
-    "hash_code": 97141068814361979350305917540387938424,
+    "hash_code": 115834584341079741498012387526826993229,
     "engine": "weaviate",
     "version": "v1.20.5",
     "remark": "None",
@@ -1692,7 +1574,34 @@
     "dataset": "gist-960-euclidean-l2",
     "dataset_group": "gist-960-euclidean",
     "dataset_tag": "no-filter",
-    "time_stamp": 1691635044212,
+    "time_stamp": 1691556077816,
+    "index_create_parameter": {
+      "ef": 100,
+      "efConstruction": 128,
+      "maxConnections": 32
+    },
+    "index_search_params": {
+      "ef": 512
+    },
+    "search_parallel": 2,
+    "search_top": 100,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.9475900000000002,
+    "rps": 130.1537888800565,
+    "p95_time": 0.01833766750205541,
+    "mean_time": 0.014936575392497617
+  },
+  {
+    "hash_code": 115834584341079741498012387526826993229,
+    "engine": "weaviate",
+    "version": "v1.20.5",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691556077816,
     "index_create_parameter": {
       "ef": 100,
       "efConstruction": 128,
@@ -1705,9 +1614,90 @@
     "search_top": 10,
     "upload_parallel": 16,
     "upload_batch_size": 64,
-    "mean_precisions": 0.9754,
-    "rps": 143.30759374490034,
-    "p95_time": 0.016753398998844204,
-    "mean_time": 0.01356027947736584
+    "mean_precisions": 0.9756000000000001,
+    "rps": 144.31627024803808,
+    "p95_time": 0.01622464549509459,
+    "mean_time": 0.013442344700502871
+  },
+  {
+    "hash_code": 115834584341079741498012387526826993229,
+    "engine": "weaviate",
+    "version": "v1.20.5",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691556077816,
+    "index_create_parameter": {
+      "ef": 100,
+      "efConstruction": 128,
+      "maxConnections": 32
+    },
+    "index_search_params": {
+      "ef": 512
+    },
+    "search_parallel": 4,
+    "search_top": 10,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.9756000000000001,
+    "rps": 272.9566815091209,
+    "p95_time": 0.0177479525005765,
+    "mean_time": 0.014120417200034353
+  },
+  {
+    "hash_code": 115834584341079741498012387526826993229,
+    "engine": "weaviate",
+    "version": "v1.20.5",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691556077816,
+    "index_create_parameter": {
+      "ef": 100,
+      "efConstruction": 128,
+      "maxConnections": 32
+    },
+    "index_search_params": {
+      "ef": 512
+    },
+    "search_parallel": 8,
+    "search_top": 10,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.9756000000000001,
+    "rps": 423.73365855425857,
+    "p95_time": 0.024207014001149215,
+    "mean_time": 0.018207554416974744
+  },
+  {
+    "hash_code": 115834584341079741498012387526826993229,
+    "engine": "weaviate",
+    "version": "v1.20.5",
+    "remark": "None",
+    "index_type": "HNSW",
+    "dataset": "gist-960-euclidean-l2",
+    "dataset_group": "gist-960-euclidean",
+    "dataset_tag": "no-filter",
+    "time_stamp": 1691556077816,
+    "index_create_parameter": {
+      "ef": 100,
+      "efConstruction": 128,
+      "maxConnections": 32
+    },
+    "index_search_params": {
+      "ef": 512
+    },
+    "search_parallel": 1,
+    "search_top": 10,
+    "upload_parallel": 16,
+    "upload_batch_size": 64,
+    "mean_precisions": 0.9756000000000001,
+    "rps": 72.53330357075296,
+    "p95_time": 0.01596305709608714,
+    "mean_time": 0.01346351308078738
   }
 ]

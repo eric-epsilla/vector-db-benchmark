@@ -60,7 +60,7 @@ class BaseClient:
         timestamp = now.strftime("%Y-%m-%d-%H-%M-%S")
         experiments_file = (f"{self.name}-search-{search_id}-parallel-{search_params['parallel']}"
                             f"-top-{search_params['top']}-{timestamp}.json")
-        print(f"trying to save search result, file name is {experiments_file}")
+        print(f"!!!!!!!!!!!!!!!!!!trying to save search result, file name is {experiments_file} in {RESULTS_DIR}")
         with open(RESULTS_DIR / experiments_file, "w") as out:
             out.write(
                 json.dumps({

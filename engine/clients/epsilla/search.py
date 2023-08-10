@@ -29,7 +29,7 @@ class EpsillaSearcher(BaseSearcher):
                     table_name=EPSILLA_DATABASE_NAME,
                     query_vector=vector,
                     query_field="vector",
-                    response_fields=["id", "vector"],
+                    response_fields=["id"],
                     limit=top,
                     with_distance=True
                 )
@@ -37,7 +37,7 @@ class EpsillaSearcher(BaseSearcher):
             except Exception as e:
                 print(f"epsilla search_one exception 🐛 {e}")
             time.sleep(2)
-        #print("[RESULT]:", status_code, query_response)
+        print("[RESULT]:", status_code, query_response)
         res_list = []
         for result_op in query_response["result"]:
             #print("result_op:", result_op)

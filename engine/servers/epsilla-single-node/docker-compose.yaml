@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  qdrant_bench:
+  epsilla_bench:
     image: epsilla/vectordb:latest
     network_mode: host
     deploy:

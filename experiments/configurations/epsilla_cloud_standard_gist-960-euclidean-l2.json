@@ -13,7 +13,7 @@
     "other": "None",
     "link": "",
     "connection_params": {
-      "host": "127.0.0.1",
+      "host": "172.31.90.214",
       "port": 8888,
       "timeout_config": 2000,
       "api_key": "your_api_key"
@@ -27,10 +27,171 @@
     },
     "search_params": [
       {
+        "parallel": 1,
+        "top": 10,
+        "vectorIndexConfig": {
+          "ef": 128
+        }
+      },
+      {
+        "parallel": 1,
+        "top": 10,
+        "vectorIndexConfig": {
+          "ef": 256
+        }
+      },
+      {
+        "parallel": 1,
+        "top": 10,
+        "vectorIndexConfig": {
+          "ef": 512
+        }
+      },
+      {
+        "parallel": 1,
+        "top": 100,
+        "vectorIndexConfig": {
+          "ef": 128
+        }
+      },
+      {
+        "parallel": 1,
+        "top": 100,
+        "vectorIndexConfig": {
+          "ef": 256
+        }
+      },
+      {
+        "parallel": 1,
+        "top": 100,
+        "vectorIndexConfig": {
+          "ef": 512
+        }
+      },
+      {
+        "parallel": 2,
+        "top": 10,
+        "vectorIndexConfig": {
+          "ef": 128
+        }
+      },
+      {
         "parallel": 2,
         "top": 10,
         "vectorIndexConfig": {
           "ef": 256
+        }
+      },
+      {
+        "parallel": 2,
+        "top": 10,
+        "vectorIndexConfig": {
+          "ef": 512
+        }
+      },
+      {
+        "parallel": 2,
+        "top": 100,
+        "vectorIndexConfig": {
+          "ef": 128
+        }
+      },
+      {
+        "parallel": 2,
+        "top": 100,
+        "vectorIndexConfig": {
+          "ef": 256
+        }
+      },
+      {
+        "parallel": 2,
+        "top": 100,
+        "vectorIndexConfig": {
+          "ef": 512
+        }
+      },
+      {
+        "parallel": 4,
+        "top": 10,
+        "vectorIndexConfig": {
+          "ef": 128
+        }
+      },
+      {
+        "parallel": 4,
+        "top": 10,
+        "vectorIndexConfig": {
+          "ef": 256
+        }
+      },
+      {
+        "parallel": 4,
+        "top": 10,
+        "vectorIndexConfig": {
+          "ef": 512
+        }
+      },
+      {
+        "parallel": 4,
+        "top": 100,
+        "vectorIndexConfig": {
+          "ef": 128
+        }
+      },
+      {
+        "parallel": 4,
+        "top": 100,
+        "vectorIndexConfig": {
+          "ef": 256
+        }
+      },
+      {
+        "parallel": 4,
+        "top": 100,
+        "vectorIndexConfig": {
+          "ef": 512
+        }
+      },
+      {
+        "parallel": 8,
+        "top": 10,
+        "vectorIndexConfig": {
+          "ef": 128
+        }
+      },
+      {
+        "parallel": 8,
+        "top": 10,
+        "vectorIndexConfig": {
+          "ef": 256
+        }
+      },
+      {
+        "parallel": 8,
+        "top": 10,
+        "vectorIndexConfig": {
+          "ef": 512
+        }
+      },
+      {
+        "parallel": 8,
+        "top": 100,
+        "vectorIndexConfig": {
+          "ef": 128
+        }
+      },
+      {
+        "parallel": 8,
+        "top": 100,
+        "vectorIndexConfig": {
+          "ef": 256
+        }
+      },
+      {
+        "parallel": 8,
+        "top": 100,
+        "vectorIndexConfig": {
+          "ef": 512
         }
       }
     ],

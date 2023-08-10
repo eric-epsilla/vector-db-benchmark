@@ -43,6 +43,8 @@ class BaseSearcher:
         start = time.perf_counter()
         search_res = cls.search_one(query.vector, query.meta_conditions, top, schema)
         end = time.perf_counter()
+        
+        # print("======query.vector:", query.vector)
 
         # Updating the TopK, the number of standard answers contained in the dataset may be less than TopK
         # The HNM dataset only has 25 standard answers.
@@ -53,8 +55,11 @@ class BaseSearcher:
         if query.expected_result is not None:
             # Retrieve the top K results of vector search
             ids = set([x[0] for x in search_res][:top])
+            # print("======ids:", ids)
             # Calculate accuracy
-            precision = len(ids.intersection(query.expected_result[:top])) / top
+            # print("======expected:", query.expected_result[:top])
+            precision = len(ids.intersection(query.expected_result[:top])) / top  
+            print("======precision:", precision)
         return precision, end - start
 
     def search_all(
@@ -109,7 +114,7 @@ class BaseSearcher:
             "precisions": precisions,
             "latencies": latencies,
         }
-        print("[RESULT]:", res)
+        # print("[RESULT]:", res)
         return res
 
     def setup_search(self, host, distance, connection_params: dict, search_params: dict):
